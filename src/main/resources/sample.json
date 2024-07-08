@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "id": 415404,
+      "name": "HdfsReplicationCommand",
+      "startTime": "2021-09-08T15:40:01.411Z",
+      "active": true,
+      "serviceRef": {
+        "clusterName": "default",
+        "serviceName": "hdfs01"
+      }
+    },
+    {
+      "id": 415308,
+      "name": "HdfsReplicationCommand",
+      "startTime": "2021-09-07T15:40:00.408Z",
+      "endTime": "2021-09-07T15:40:00.408Z",
+      "active": false,
+      "success": false,
+      "resultMessage": "Another HDFS replication command (id 415213) with clashing source (/client/marketrisk/rfds/warehouse) and destination (/client/marketrisk/rfds/warehouse) paths is in progress.",
+      "serviceRef": {
+        "clusterName": "default",
+        "serviceName": "hdfs01"
+      }
+    },
+    {
+      "id": 415213,
+      "name": "HdfsReplicationCommand",
+      "startTime": "2021-09-06T15:40:03.609Z",
+      "endTime": "2021-09-07T21:05:47.045Z",
+      "active": false,
+      "success": true,
+      "resultMessage": "HDFS replication command succeeded.",
+      "resultDataUrl": "/cmf/command/415213/download",
+      "serviceRef": {
+        "clusterName": "default",
+        "serviceName": "hdfs01"
+      },
+      "hdfsResult": {
+        "progress": 100,
+        "throughput": 21711.4,
+        "remainingTime": 0,
+        "numBytesDryRun": 0,
+        "numFilesDryRun": 0,
+        "numFilesExpected": 31328179,
+        "numBytesExpected": 57302052151975,
+        "numFilesCopied": 177644,
+        "numBytesCopied": 89711598250,
+        "numFilesSkipped": 31150535,
+        "numBytesSkipped": 57212340553725,
+        "numFilesDeleted": 444409,
+        "numFilesCopyFailed": 0,
+        "numBytesCopyFailed": 0,
+        "jobId": "job_1630821152009_0212",
+        "jobDetailsUri": "/cmf/services/16/applications/?startTime=1630942803609&endTime=1631048747045#filters=application_id=job_1630821152009_0212",
+        "dryRun": false,
+        "snapshottedDirs": [
+          "/client/marketrisk/rfds/warehouse"
+        ],
+        "failedFiles": [],
+        "runAsUser": "svc_hubdp"
+      }
+    }
+  ]
+}
