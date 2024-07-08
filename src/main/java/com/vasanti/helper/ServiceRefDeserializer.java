@@ -16,9 +16,10 @@ public class ServiceRefDeserializer extends JsonDeserializer<ServiceRef> {
         JsonNode node = jsonParser.getCodec().readTree(jsonParser);
         log.info("ServiceRefDeserializer node : {}",node.toString());
         ServiceRef serviceRef = new ServiceRef();
-        String clusterName = node.get("clusterName").asText();
+        String clusterName = node.has("clusterName") ? node.get("clusterName").asText()
+                : null;
         serviceRef.setClusterName(clusterName);
-        String serviceName = node.get("serviceName").asText();
+        String serviceName = node.has("serviceName") ? node.get("serviceName").asText() : null;
         serviceRef.setServiceName(serviceName);
         return serviceRef;
     }
